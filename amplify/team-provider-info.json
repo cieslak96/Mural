@@ -1,15 +1,38 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-mural-dev-8aeef-authRole",
-      "UnauthRoleArn": "arn:aws:iam::730335528058:role/amplify-mural-dev-8aeef-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::730335528058:role/amplify-mural-dev-8aeef-authRole",
+      "AuthRoleName": "amplify-mural-dev-db3eb-authRole",
+      "UnauthRoleArn": "arn:aws:iam::730335528058:role/amplify-mural-dev-db3eb-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::730335528058:role/amplify-mural-dev-db3eb-authRole",
       "Region": "us-west-1",
-      "DeploymentBucketName": "amplify-mural-dev-8aeef-deployment",
-      "UnauthRoleName": "amplify-mural-dev-8aeef-unauthRole",
-      "StackName": "amplify-mural-dev-8aeef",
-      "StackId": "arn:aws:cloudformation:us-west-1:730335528058:stack/amplify-mural-dev-8aeef/a1761e70-95a5-11ef-b17e-06466b7d192d",
-      "AmplifyAppId": "d3ik1r1eorbh6q"
+      "DeploymentBucketName": "amplify-mural-dev-db3eb-deployment",
+      "UnauthRoleName": "amplify-mural-dev-db3eb-unauthRole",
+      "StackName": "amplify-mural-dev-db3eb",
+      "StackId": "arn:aws:cloudformation:us-west-1:730335528058:stack/amplify-mural-dev-db3eb/db1002d0-95ba-11ef-a311-060fd33b6023",
+      "AmplifyAppId": "d1w4qskhpysra1"
+    },
+    "categories": {
+      "auth": {
+        "mural4626a2c4": {
+          "userPoolId": "us-west-1_g59dL1RpX",
+          "userPoolName": "Mural",
+          "webClientId": "2rh9hhdu9ga66g6scs2us436i6",
+          "nativeClientId": "2rh9hhdu9ga66g6scs2us436i6",
+          "identityPoolId": "us-west-1:660d7a96-c3ca-4e99-b0d7-99c7f295cbe7",
+          "identityPoolName": "mural",
+          "allowUnauthenticatedIdentities": true,
+          "authRoleArn": "arn:aws:iam::730335528058:role/service-role/muralauth",
+          "authRoleName": "muralauth",
+          "unauthRoleArn": "arn:aws:iam::730335528058:role/service-role/muralaunauth",
+          "unauthRoleName": "muralaunauth"
+        }
+      },
+      "storage": {
+        "muralb00db063": {
+          "bucketName": "amplify-mural-dev-db3eb-deployment",
+          "region": "us-west-1"
+        }
+      }
     }
   }
 }

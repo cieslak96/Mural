@@ -1,1 +1,125 @@
-{}
+{
+  "auth": {
+    "mural4626a2c4": {
+      "customAuth": false,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "imported"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_mural4626a2c4_allowUnauthenticatedIdentities": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural4626a2c4"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural4626a2c4_authRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural4626a2c4"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural4626a2c4_authRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural4626a2c4"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural4626a2c4_identityPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural4626a2c4"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural4626a2c4_identityPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural4626a2c4"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural4626a2c4_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural4626a2c4"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural4626a2c4_unauthRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural4626a2c4"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural4626a2c4_unauthRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural4626a2c4"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural4626a2c4_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural4626a2c4"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural4626a2c4_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural4626a2c4"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural4626a2c4_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural4626a2c4"
+        }
+      ]
+    },
+    "AMPLIFY_storage_muralb00db063_bucketName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "muralb00db063"
+        }
+      ]
+    },
+    "AMPLIFY_storage_muralb00db063_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "muralb00db063"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "muralb00db063": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3",
+      "serviceType": "imported"
+    }
+  }
+}
