@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mural-dev-8aeef-authRole",
+      "UnauthRoleArn": "arn:aws:iam::730335528058:role/amplify-mural-dev-8aeef-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::730335528058:role/amplify-mural-dev-8aeef-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-mural-dev-8aeef-deployment",
+      "UnauthRoleName": "amplify-mural-dev-8aeef-unauthRole",
+      "StackName": "amplify-mural-dev-8aeef",
+      "StackId": "arn:aws:cloudformation:us-west-1:730335528058:stack/amplify-mural-dev-8aeef/a1761e70-95a5-11ef-b17e-06466b7d192d",
+      "AmplifyAppId": "d3ik1r1eorbh6q"
+    }
+  }
+}
