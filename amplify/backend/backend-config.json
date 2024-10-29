@@ -1,31 +1,11 @@
 {
   "auth": {
-    "muralb345b907": {
+    "murala4886e99": {
       "customAuth": false,
       "dependsOn": [],
-      "frontendAuthConfig": {
-        "mfaConfiguration": "OFF",
-        "mfaTypes": [
-          "SMS"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyCharacters": [],
-          "passwordPolicyMinLength": 8
-        },
-        "signupAttributes": [
-          "EMAIL"
-        ],
-        "socialProviders": [],
-        "usernameAttributes": [
-          "EMAIL",
-          "PHONE_NUMBER"
-        ],
-        "verificationMechanisms": [
-          "EMAIL"
-        ]
-      },
       "providerPlugin": "awscloudformation",
-      "service": "Cognito"
+      "service": "Cognito",
+      "serviceType": "imported"
     }
   },
   "function": {
@@ -36,6 +16,94 @@
     }
   },
   "parameters": {
+    "AMPLIFY_auth_murala4886e99_allowUnauthenticatedIdentities": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "murala4886e99"
+        }
+      ]
+    },
+    "AMPLIFY_auth_murala4886e99_authRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "murala4886e99"
+        }
+      ]
+    },
+    "AMPLIFY_auth_murala4886e99_authRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "murala4886e99"
+        }
+      ]
+    },
+    "AMPLIFY_auth_murala4886e99_identityPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "murala4886e99"
+        }
+      ]
+    },
+    "AMPLIFY_auth_murala4886e99_identityPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "murala4886e99"
+        }
+      ]
+    },
+    "AMPLIFY_auth_murala4886e99_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "murala4886e99"
+        }
+      ]
+    },
+    "AMPLIFY_auth_murala4886e99_unauthRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "murala4886e99"
+        }
+      ]
+    },
+    "AMPLIFY_auth_murala4886e99_unauthRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "murala4886e99"
+        }
+      ]
+    },
+    "AMPLIFY_auth_murala4886e99_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "murala4886e99"
+        }
+      ]
+    },
+    "AMPLIFY_auth_murala4886e99_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "murala4886e99"
+        }
+      ]
+    },
+    "AMPLIFY_auth_murala4886e99_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "murala4886e99"
+        }
+      ]
+    },
     "AMPLIFY_function_S3Trigger3f8e9097_deploymentBucketName": {
       "usedBy": [
         {
@@ -51,23 +119,30 @@
           "resourceName": "S3Trigger3f8e9097"
         }
       ]
+    },
+    "AMPLIFY_storage_muralc05dbd6a_bucketName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "muralc05dbd6a"
+        }
+      ]
+    },
+    "AMPLIFY_storage_muralc05dbd6a_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "muralc05dbd6a"
+        }
+      ]
     }
   },
   "storage": {
-    "s3bb77f37e": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "Name",
-            "Arn",
-            "LambdaExecutionRole"
-          ],
-          "category": "function",
-          "resourceName": "S3Trigger3f8e9097"
-        }
-      ],
+    "muralc05dbd6a": {
+      "dependsOn": [],
       "providerPlugin": "awscloudformation",
-      "service": "S3"
+      "service": "S3",
+      "serviceType": "imported"
     }
   }
 }
