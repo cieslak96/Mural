@@ -1,11 +1,31 @@
 {
   "auth": {
-    "muralfcc2eb31": {
+    "muralf13dbd06": {
       "customAuth": false,
       "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL",
+          "PHONE_NUMBER"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
       "providerPlugin": "awscloudformation",
-      "service": "Cognito",
-      "serviceType": "imported"
+      "service": "Cognito"
     }
   },
   "function": {
@@ -16,91 +36,91 @@
     }
   },
   "parameters": {
-    "AMPLIFY_auth_muralfcc2eb31_allowUnauthenticatedIdentities": {
+    "AMPLIFY_auth_mural627ed1e9_allowUnauthenticatedIdentities": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "muralfcc2eb31"
+          "resourceName": "mural627ed1e9"
         }
       ]
     },
-    "AMPLIFY_auth_muralfcc2eb31_authRoleArn": {
+    "AMPLIFY_auth_mural627ed1e9_authRoleArn": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "muralfcc2eb31"
+          "resourceName": "mural627ed1e9"
         }
       ]
     },
-    "AMPLIFY_auth_muralfcc2eb31_authRoleName": {
+    "AMPLIFY_auth_mural627ed1e9_authRoleName": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "muralfcc2eb31"
+          "resourceName": "mural627ed1e9"
         }
       ]
     },
-    "AMPLIFY_auth_muralfcc2eb31_identityPoolId": {
+    "AMPLIFY_auth_mural627ed1e9_identityPoolId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "muralfcc2eb31"
+          "resourceName": "mural627ed1e9"
         }
       ]
     },
-    "AMPLIFY_auth_muralfcc2eb31_identityPoolName": {
+    "AMPLIFY_auth_mural627ed1e9_identityPoolName": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "muralfcc2eb31"
+          "resourceName": "mural627ed1e9"
         }
       ]
     },
-    "AMPLIFY_auth_muralfcc2eb31_nativeClientId": {
+    "AMPLIFY_auth_mural627ed1e9_nativeClientId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "muralfcc2eb31"
+          "resourceName": "mural627ed1e9"
         }
       ]
     },
-    "AMPLIFY_auth_muralfcc2eb31_unauthRoleArn": {
+    "AMPLIFY_auth_mural627ed1e9_unauthRoleArn": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "muralfcc2eb31"
+          "resourceName": "mural627ed1e9"
         }
       ]
     },
-    "AMPLIFY_auth_muralfcc2eb31_unauthRoleName": {
+    "AMPLIFY_auth_mural627ed1e9_unauthRoleName": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "muralfcc2eb31"
+          "resourceName": "mural627ed1e9"
         }
       ]
     },
-    "AMPLIFY_auth_muralfcc2eb31_userPoolId": {
+    "AMPLIFY_auth_mural627ed1e9_userPoolId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "muralfcc2eb31"
+          "resourceName": "mural627ed1e9"
         }
       ]
     },
-    "AMPLIFY_auth_muralfcc2eb31_userPoolName": {
+    "AMPLIFY_auth_mural627ed1e9_userPoolName": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "muralfcc2eb31"
+          "resourceName": "mural627ed1e9"
         }
       ]
     },
-    "AMPLIFY_auth_muralfcc2eb31_webClientId": {
+    "AMPLIFY_auth_mural627ed1e9_webClientId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "muralfcc2eb31"
+          "resourceName": "mural627ed1e9"
         }
       ]
     },
@@ -120,29 +140,38 @@
         }
       ]
     },
-    "AMPLIFY_storage_muralfe0d4bc7_bucketName": {
+    "AMPLIFY_storage_muralc45462ad_bucketName": {
       "usedBy": [
         {
           "category": "storage",
-          "resourceName": "muralfe0d4bc7"
+          "resourceName": "muralc45462ad"
         }
       ]
     },
-    "AMPLIFY_storage_muralfe0d4bc7_region": {
+    "AMPLIFY_storage_muralc45462ad_region": {
       "usedBy": [
         {
           "category": "storage",
-          "resourceName": "muralfe0d4bc7"
+          "resourceName": "muralc45462ad"
         }
       ]
     }
   },
   "storage": {
-    "muralfe0d4bc7": {
-      "dependsOn": [],
+    "s3fd8cdac1": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "LambdaExecutionRole"
+          ],
+          "category": "function",
+          "resourceName": "S3Trigger3f8e9097"
+        }
+      ],
       "providerPlugin": "awscloudformation",
-      "service": "S3",
-      "serviceType": "imported"
+      "service": "S3"
     }
   }
 }
