@@ -19,7 +19,7 @@
         }
       },
       "auth": {
-        "murala4886e99": {
+        "muralfcc2eb31": {
           "userPoolId": "us-west-1_g59dL1RpX",
           "userPoolName": "Mural",
           "webClientId": "2rh9hhdu9ga66g6scs2us436i6",
@@ -34,7 +34,7 @@
         }
       },
       "storage": {
-        "muralc05dbd6a": {
+        "muralfe0d4bc7": {
           "bucketName": "muralbucket",
           "region": "us-west-1"
         }
