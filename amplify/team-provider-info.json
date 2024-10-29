@@ -1,4 +1,31 @@
 {
+  "main": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mural-main-8d67e-authRole",
+      "UnauthRoleArn": "arn:aws:iam::730335528058:role/amplify-mural-main-8d67e-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::730335528058:role/amplify-mural-main-8d67e-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-mural-main-8d67e-deployment",
+      "UnauthRoleName": "amplify-mural-main-8d67e-unauthRole",
+      "StackName": "amplify-mural-main-8d67e",
+      "StackId": "arn:aws:cloudformation:us-west-1:730335528058:stack/amplify-mural-main-8d67e/4f875f30-95d1-11ef-ab45-02ae8a2ae7e7",
+      "AmplifyAppId": "d2mtsj9fpzje8z"
+    },
+    "categories": {
+      "auth": {
+        "muralb345b907": {}
+      },
+      "function": {
+        "S3Trigger3f8e9097": {
+          "deploymentBucketName": "amplify-mural-main-8d67e-deployment",
+          "s3Key": "amplify-builds/S3Trigger3f8e9097-502b7131646570483946-build.zip"
+        }
+      },
+      "storage": {
+        "s3bb77f37e": {}
+      }
+    }
+  },
   "dev": {
     "awscloudformation": {
       "AuthRoleName": "amplify-mural-dev-9711e-authRole",

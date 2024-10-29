@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3bb77f37e",
+  "policyUUID": "bb77f37e",
+  "bucketName": "mural848c2251bac0460ba1f20c4128a9baf9",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "S3Trigger3f8e9097",
+  "groupAccess": {}
+}

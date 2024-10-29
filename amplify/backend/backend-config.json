@@ -1,6 +1,6 @@
 {
   "auth": {
-    "muralf13dbd06": {
+    "muralb345b907": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -36,94 +36,6 @@
     }
   },
   "parameters": {
-    "AMPLIFY_auth_mural627ed1e9_allowUnauthenticatedIdentities": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "mural627ed1e9"
-        }
-      ]
-    },
-    "AMPLIFY_auth_mural627ed1e9_authRoleArn": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "mural627ed1e9"
-        }
-      ]
-    },
-    "AMPLIFY_auth_mural627ed1e9_authRoleName": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "mural627ed1e9"
-        }
-      ]
-    },
-    "AMPLIFY_auth_mural627ed1e9_identityPoolId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "mural627ed1e9"
-        }
-      ]
-    },
-    "AMPLIFY_auth_mural627ed1e9_identityPoolName": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "mural627ed1e9"
-        }
-      ]
-    },
-    "AMPLIFY_auth_mural627ed1e9_nativeClientId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "mural627ed1e9"
-        }
-      ]
-    },
-    "AMPLIFY_auth_mural627ed1e9_unauthRoleArn": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "mural627ed1e9"
-        }
-      ]
-    },
-    "AMPLIFY_auth_mural627ed1e9_unauthRoleName": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "mural627ed1e9"
-        }
-      ]
-    },
-    "AMPLIFY_auth_mural627ed1e9_userPoolId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "mural627ed1e9"
-        }
-      ]
-    },
-    "AMPLIFY_auth_mural627ed1e9_userPoolName": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "mural627ed1e9"
-        }
-      ]
-    },
-    "AMPLIFY_auth_mural627ed1e9_webClientId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "mural627ed1e9"
-        }
-      ]
-    },
     "AMPLIFY_function_S3Trigger3f8e9097_deploymentBucketName": {
       "usedBy": [
         {
@@ -139,26 +51,10 @@
           "resourceName": "S3Trigger3f8e9097"
         }
       ]
-    },
-    "AMPLIFY_storage_muralc45462ad_bucketName": {
-      "usedBy": [
-        {
-          "category": "storage",
-          "resourceName": "muralc45462ad"
-        }
-      ]
-    },
-    "AMPLIFY_storage_muralc45462ad_region": {
-      "usedBy": [
-        {
-          "category": "storage",
-          "resourceName": "muralc45462ad"
-        }
-      ]
     }
   },
   "storage": {
-    "s3fd8cdac1": {
+    "s3bb77f37e": {
       "dependsOn": [
         {
           "attributes": [
