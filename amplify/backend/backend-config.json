@@ -1,125 +1,73 @@
 {
   "auth": {
-    "muralf25f6dc6": {
+    "muralb345b907": {
       "customAuth": false,
       "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL",
+          "PHONE_NUMBER"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
       "providerPlugin": "awscloudformation",
-      "service": "Cognito",
-      "serviceType": "imported"
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "S3Trigger3f8e9097": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   },
   "parameters": {
-    "AMPLIFY_auth_muralf25f6dc6_allowUnauthenticatedIdentities": {
+    "AMPLIFY_function_S3Trigger3f8e9097_deploymentBucketName": {
       "usedBy": [
         {
-          "category": "auth",
-          "resourceName": "muralf25f6dc6"
+          "category": "function",
+          "resourceName": "S3Trigger3f8e9097"
         }
       ]
     },
-    "AMPLIFY_auth_muralf25f6dc6_authRoleArn": {
+    "AMPLIFY_function_S3Trigger3f8e9097_s3Key": {
       "usedBy": [
         {
-          "category": "auth",
-          "resourceName": "muralf25f6dc6"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralf25f6dc6_authRoleName": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralf25f6dc6"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralf25f6dc6_identityPoolId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralf25f6dc6"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralf25f6dc6_identityPoolName": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralf25f6dc6"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralf25f6dc6_nativeClientId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralf25f6dc6"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralf25f6dc6_unauthRoleArn": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralf25f6dc6"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralf25f6dc6_unauthRoleName": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralf25f6dc6"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralf25f6dc6_userPoolId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralf25f6dc6"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralf25f6dc6_userPoolName": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralf25f6dc6"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralf25f6dc6_webClientId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralf25f6dc6"
-        }
-      ]
-    },
-    "AMPLIFY_storage_murale3456303_bucketName": {
-      "usedBy": [
-        {
-          "category": "storage",
-          "resourceName": "murale3456303"
-        }
-      ]
-    },
-    "AMPLIFY_storage_murale3456303_region": {
-      "usedBy": [
-        {
-          "category": "storage",
-          "resourceName": "murale3456303"
+          "category": "function",
+          "resourceName": "S3Trigger3f8e9097"
         }
       ]
     }
   },
   "storage": {
-    "murale3456303": {
-      "dependsOn": [],
+    "s3bb77f37e": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "LambdaExecutionRole"
+          ],
+          "category": "function",
+          "resourceName": "S3Trigger3f8e9097"
+        }
+      ],
       "providerPlugin": "awscloudformation",
-      "service": "S3",
-      "serviceType": "imported"
+      "service": "S3"
     }
   }
 }
