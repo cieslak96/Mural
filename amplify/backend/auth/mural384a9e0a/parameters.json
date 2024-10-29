@@ -1,0 +1,22 @@
+{
+  "authSelections": "identityPoolAndUserPool",
+  "resourceName": "mural384a9e0a",
+  "serviceType": "imported",
+  "region": "us-west-1",
+  "aliasAttributes": [
+    "email",
+    "phone_number"
+  ],
+  "requiredAttributes": [
+    "email",
+    "name"
+  ],
+  "passwordPolicyMinLength": 6,
+  "passwordPolicyCharacters": [],
+  "mfaConfiguration": "OFF",
+  "autoVerifiedAttributes": [
+    "email",
+    "phone_number"
+  ],
+  "mfaTypes": []
+}
