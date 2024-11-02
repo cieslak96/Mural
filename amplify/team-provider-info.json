@@ -20,6 +20,12 @@
       },
       "auth": {
         "mural8aa9f011": {}
+      },
+      "storage": {
+        "murald9e66579": {
+          "bucketName": "muralbucket",
+          "region": "us-west-1"
+        }
       }
     }
   }

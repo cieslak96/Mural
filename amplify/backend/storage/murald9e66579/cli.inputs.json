@@ -1,0 +1,70 @@
+{
+    "aws_project_region": "us-west-1",
+    "aws_cognito_identity_pool_id": "us-west-1:660d7a96-c3ca-4e99-b0d7-99c7f295cbe7",
+    "aws_cognito_region": "us-west-1",
+    "aws_user_pools_id": "us-west-1_g59dL1RpX",
+    "aws_user_pools_web_client_id": "2rh9hhdu9ga66g6scs2us436i6",
+    "oauth": {},
+    "aws_cognito_username_attributes": [],
+    "aws_cognito_social_providers": [],
+    "aws_cognito_signup_attributes": [
+      "EMAIL",
+      "NAME"
+    ],
+    "aws_cognito_mfa_configuration": "OFF",
+    "aws_cognito_mfa_types": [],
+    "aws_cognito_password_protection_settings": {
+      "passwordPolicyMinLength": 6,
+      "passwordPolicyCharacters": []
+    },
+    "aws_cognito_verification_mechanisms": [
+      "EMAIL",
+      "PHONE_NUMBER"
+    ],
+    "aws_user_files_s3_bucket": "muralbucket",
+    "aws_user_files_s3_bucket_region": "us-west-1",
+    "s3Resource": {
+      "resourceName": "murald9e66579",
+      "policyUUID": "aff69161",
+      "bucketName": "muralbucket",
+      "storageAccess": "auth",
+      "authAccess": [
+        "CREATE_AND_UPDATE",
+        "READ",
+        "DELETE"
+      ],
+      "guestAccess": [],
+      "triggerFunction": "S3Trigger51550251",
+      "groupAccess": {}
+    },
+    "bucketName": "muralbucket",
+    "selectedGuestPermissions": [],
+    "selectedAuthenticatedPermissions": [
+      "s3:PutObject",
+      "s3:GetObject",
+      "s3:ListBucket",
+      "s3:DeleteObject"
+    ],
+    "unauthRoleName": {
+      "Ref": "UnauthRoleName"
+    },
+    "authRoleName": {
+      "Ref": "AuthRoleName"
+    },
+    "s3PrivatePolicy": "Private_policy_aff69161",
+    "s3ProtectedPolicy": "Protected_policy_aff69161",
+    "s3PublicPolicy": "Public_policy_aff69161",
+    "s3ReadPolicy": "read_policy_aff69161",
+    "s3UploadsPolicy": "Uploads_policy_aff69161",
+    "authPolicyName": "s3_amplify_aff69161",
+    "unauthPolicyName": "s3_amplify_aff69161",
+    "AuthenticatedAllowList": "ALLOW",
+    "GuestAllowList": "DISALLOW",
+    "s3PermissionsAuthenticatedPrivate": "s3:PutObject,s3:GetObject,s3:DeleteObject",
+    "s3PermissionsAuthenticatedProtected": "s3:PutObject,s3:GetObject,s3:DeleteObject",
+    "s3PermissionsAuthenticatedPublic": "s3:PutObject,s3:GetObject,s3:DeleteObject",
+    "s3PermissionsAuthenticatedUploads": "s3:PutObject",
+    "s3PermissionsGuestPublic": "DISALLOW",
+    "s3PermissionsGuestUploads": "DISALLOW"
+  }
+  

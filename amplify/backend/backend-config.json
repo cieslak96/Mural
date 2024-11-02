@@ -55,23 +55,30 @@
           "resourceName": "amplifyhosting"
         }
       ]
+    },
+    "AMPLIFY_storage_murald9e66579_bucketName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "murald9e66579"
+        }
+      ]
+    },
+    "AMPLIFY_storage_murald9e66579_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "murald9e66579"
+        }
+      ]
     }
   },
   "storage": {
-    "s3aff69161": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "Name",
-            "Arn",
-            "LambdaExecutionRole"
-          ],
-          "category": "function",
-          "resourceName": "S3Trigger51550251"
-        }
-      ],
+    "murald9e66579": {
+      "dependsOn": [],
       "providerPlugin": "awscloudformation",
-      "service": "S3"
+      "service": "S3",
+      "serviceType": "imported"
     }
   }
 }
