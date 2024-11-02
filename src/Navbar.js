@@ -37,6 +37,7 @@ const Navbar = ({ isAuthenticated, signOut, profileImageUrl }) => {
   // Toggle dropdown visibility
   const toggleDropdown = () => {
     setDropdownOpen((prevOpen) => !prevOpen);
+    console.log("Dropdown toggled");
   };
 
   return (
@@ -55,7 +56,7 @@ const Navbar = ({ isAuthenticated, signOut, profileImageUrl }) => {
               src={profileImage}
               alt="Profile"
               className="profile-picture-navbar"
-              onClick={() => navigate("/profile")}
+              onClick={() => navigate("/")}
               aria-label="Go to profile"
             />
 

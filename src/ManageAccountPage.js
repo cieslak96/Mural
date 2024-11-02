@@ -3,52 +3,58 @@ import { getUrl, uploadData, remove } from 'aws-amplify/storage';
 import { deleteUser } from '@aws-amplify/auth';
 import { Button, Flex, Heading, Image, TextField, View } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
-import './styles.css';
+import "./styles.css";
+
+
 
 const ManageAccountPage = ({ user, onProfileImageChange }) => {
-  const [profilePic, setProfilePic] = useState(null);
-  const [imageUrl, setImageUrl] = useState(null);
-  const [uploading, setUploading] = useState(false);
-  const [showFileInput, setShowFileInput] = useState(false); // State to toggle file input visibility
-  const [errorMessage, setErrorMessage] = useState('');
+  // State hooks for managing component data
+  const [profilePic, setProfilePic] = useState(null); // Holds the selected image file for upload
+  const [imageUrl, setImageUrl] = useState(null); // URL of the profile picture
+  const [uploading, setUploading] = useState(false); // Flag to indicate if the image is being uploaded
+  const [showFileInput, setShowFileInput] = useState(false); // Controls visibility of the file input field
+  const [errorMessage, setErrorMessage] = useState(''); // Stores error messages
 
   // Default image path for users without a profile picture
   const defaultImagePath = 'default-pictures/user.PNG';
 
-  // Fetch existing profile picture on mount
+  // Function to fetch the user's existing profile picture from S3
   const fetchProfileImage = useCallback(async () => {
     try {
+      // Try to get the URL of the user's profile picture from S3
       const linkToStorageFile = await getUrl({
         path: `profile-pictures/${user.username}`,
         options: { validateObjectExistence: true, expiresIn: 900 }
       });
-      setImageUrl(linkToStorageFile.url); // Update with the signed URL
-      onProfileImageChange(linkToStorageFile.url);
+      setImageUrl(linkToStorageFile.url); // Update the image URL state
+      onProfileImageChange(linkToStorageFile.url); // Notify parent component of the image URL
     } catch (error) {
+      // If no profile picture is found, use the default image
       console.log('No existing profile picture found, using default.');
       const defaultLinkToStorageFile = await getUrl({
         path: defaultImagePath,
         options: { validateObjectExistence: true, expiresIn: 900 }
       });
-      setImageUrl(defaultLinkToStorageFile.url); // Use the signed URL for the default image
-      onProfileImageChange(defaultLinkToStorageFile.url);
+      setImageUrl(defaultLinkToStorageFile.url); // Set the default image URL
+      onProfileImageChange(defaultLinkToStorageFile.url); // Notify parent component
     }
   }, [user.username, onProfileImageChange, defaultImagePath]);
 
+  // Fetch the profile image when the component mounts
   useEffect(() => {
     fetchProfileImage();
   }, [fetchProfileImage]);
 
-  // Handle file selection
+  // Handle file selection for uploading
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
       setProfilePic(file); // Store the selected file
-      setErrorMessage(''); // Clear any error messages
+      setErrorMessage(''); // Clear any previous error messages
     }
   };
 
-  // Upload the selected profile picture to S3
+  // Function to upload the selected profile picture to S3
   const uploadProfilePic = async (event) => {
     event.preventDefault();
     if (!profilePic) {
@@ -56,7 +62,7 @@ const ManageAccountPage = ({ user, onProfileImageChange }) => {
       return;
     }
 
-    setUploading(true);
+    setUploading(true); // Set the uploading flag to true
 
     try {
       // Upload the file to S3
@@ -66,48 +72,55 @@ const ManageAccountPage = ({ user, onProfileImageChange }) => {
         options: { contentType: profilePic.type }
       });
 
-      // Fetch the new URL of the uploaded image
-      const linkToStorageFile = await getUrl({
-        path: `profile-pictures/${user.username}`,
-        options: { validateObjectExistence: true, expiresIn: 900 }
-      });
+      // Wait for a short delay before fetching the new image URL
+      setTimeout(async () => {
+        const linkToStorageFile = await getUrl({
+          path: `profile-pictures/${user.username}`,
+          options: { validateObjectExistence: true, expiresIn: 900 }
+        });
 
-      setImageUrl(linkToStorageFile.url); // Update the displayed image
-      onProfileImageChange(linkToStorageFile.url); // Notify parent of profile picture change
-      setProfilePic(null);
-      setUploading(false);
-      setShowFileInput(false); // Hide file input after successful upload
+        // Add a unique timestamp to the URL to bypass browser cache
+        const updatedUrl = `${linkToStorageFile.url}?timestamp=${new Date().getTime()}`;
+        setImageUrl(updatedUrl); // Update the image URL
+        onProfileImageChange(updatedUrl); // Notify parent component
+      }, 2000); // 2-second delay
 
+      setProfilePic(null); // Clear the selected file
+      setUploading(false); // Reset the uploading flag
+      setShowFileInput(false); // Hide the file input field
     } catch (error) {
+      // Handle any errors during the upload process
       console.error('Upload error:', error);
       setErrorMessage(`Failed to upload the profile picture: ${error.message}`);
-      setUploading(false);
+      setUploading(false); // Reset the uploading flag
     }
   };
 
-  // Delete the profile picture from S3 and reset to default
+  // Function to delete the profile picture and reset to the default image
   const deleteProfilePic = async () => {
     try {
       await remove({
         path: `profile-pictures/${user.username}`
       });
+      // Fetch and set the default image URL
       const defaultLinkToStorageFile = await getUrl({
         path: defaultImagePath,
         options: { validateObjectExistence: true, expiresIn: 900 }
       });
-      setImageUrl(defaultLinkToStorageFile.url); // Reset to default image
-      onProfileImageChange(defaultLinkToStorageFile.url); // Notify parent of profile picture removal
+      setImageUrl(defaultLinkToStorageFile.url); // Update the image URL
+      onProfileImageChange(defaultLinkToStorageFile.url); // Notify parent component
     } catch (error) {
       console.error('Error deleting profile picture:', error);
     }
   };
 
+  // Function to delete the user account
   const handleDeleteUser = async () => {
     const confirmation = window.confirm('Are you sure you want to delete your account? This action cannot be undone.');
-  
+
     if (confirmation) {
       try {
-        await deleteUser(); // Use deleteUser function from Amplify Auth
+        await deleteUser(); // Use Amplify Auth to delete the user account
         alert('Account deleted successfully.');
         // Optionally, redirect the user after account deletion
       } catch (error) {
@@ -118,50 +131,54 @@ const ManageAccountPage = ({ user, onProfileImageChange }) => {
 
   return (
     <View>
-         <div className='page-container'>
-      <Heading level={1}>Manage Account</Heading>
-      
-      {/* Flex container to align profile picture and buttons */}
-      <Flex direction="row" alignItems="center" margin="3rem 0">
-        {/* Display Current Profile Picture */}
-        {imageUrl ? (
-          <Image src={imageUrl} alt="Profile Picture" style={{ width: 150, height: 150, borderRadius: '50%' }} />
-        ) : (
-          <p>No profile picture uploaded</p>
-        )}
-
-        {/* File Input and Buttons */}
-        <Flex direction="column" marginLeft="2rem">
-          {showFileInput && (
-            <>
-              <TextField
-                name="profilePic"
-                as="input"
-                type="file"
-                accept="image/*"
-                onChange={handleFileChange}
-                labelHidden
-                style={{ marginBottom: '1rem' }}
-              />
-              <Button onClick={uploadProfilePic} variation="primary" disabled={uploading} style={{ marginBottom: '1rem' }}>
-                {uploading ? 'Uploading...' : 'Upload Profile Picture'}
-              </Button>
-            </>
+      <div className='page-container'>
+        <Heading level={1}>Manage Account</Heading>
+        
+        {/* Flex container to align profile picture and buttons */}
+        <Flex direction="row" alignItems="center" margin="3rem 0">
+          {imageUrl ? (
+            <Image src={imageUrl} alt="Profile Picture" style={{ width: 150, height: 150, borderRadius: '50%' }} />
+          ) : (
+            <p>No profile picture uploaded</p>
           )}
-          <Button onClick={() => setShowFileInput(!showFileInput)} variation="primary" style={{ marginBottom: '1rem' }}>
-            {showFileInput ? 'Cancel' : 'Update Profile Picture'}
-          </Button>
-          <Button onClick={deleteProfilePic} variation="link">
-            Delete Profile Picture
-          </Button>
+
+          <Flex direction="column" marginLeft="2rem">
+            {showFileInput && (
+              <>
+                {/* File input for selecting a profile picture */}
+                <TextField
+                  name="profilePic"
+                  as="input"
+                  type="file"
+                  accept="image/*"
+                  onChange={handleFileChange}
+                  labelHidden
+                  style={{ marginBottom: '1rem' }}
+                />
+                {/* Button to upload the selected profile picture */}
+                <Button onClick={uploadProfilePic} variation="primary" disabled={uploading} style={{ marginBottom: '1rem' }}>
+                  {uploading ? 'Uploading...' : 'Upload Profile Picture'}
+                </Button>
+              </>
+            )}
+            {/* Button to toggle the file input visibility */}
+            <Button onClick={() => setShowFileInput(!showFileInput)} variation="primary" style={{ marginBottom: '1rem' }}>
+              {showFileInput ? 'Cancel' : 'Update Profile Picture'}
+            </Button>
+            {/* Button to delete the profile picture */}
+            <Button onClick={deleteProfilePic} variation="link">
+              Delete Profile Picture
+            </Button>
+          </Flex>
         </Flex>
-      </Flex>
 
-      {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+        {/* Display error messages */}
+        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
 
-      {/* Account Management */}
-      <Heading level={2}>Account Actions</Heading>
-      <Button onClick={handleDeleteUser}>Delete Account 😢</Button>
+        {/* Account management section */}
+        <Heading level={2}>Account Actions</Heading>
+        {/* Button to delete the user account */}
+        <Button onClick={handleDeleteUser}>Delete Account 😢</Button>
       </div>
     </View>
   );

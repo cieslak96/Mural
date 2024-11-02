@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
-import HomePage from "./HomePage";
 import ProfilePage from "./ProfilePage";
 import ReelPage from "./ReelPage";
 import ManageAccountPage from "./ManageAccountPage"; // Import Manage Account page
@@ -123,9 +122,7 @@ const App = () => {
                   
                   {/* App Routes */}
                   <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route
-                      path="/profile"
+                    <Route path="/" 
                       element={
                         <ProfilePage
                           user={currentUser}

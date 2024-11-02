@@ -1,28 +1,11 @@
 {
   "auth": {
-    "mural8aa9f011": {
+    "mural9634c0e5": {
       "customAuth": false,
       "dependsOn": [],
-      "frontendAuthConfig": {
-        "mfaConfiguration": "OFF",
-        "mfaTypes": [
-          "SMS"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyCharacters": [],
-          "passwordPolicyMinLength": 8
-        },
-        "signupAttributes": [
-          "EMAIL"
-        ],
-        "socialProviders": [],
-        "usernameAttributes": [],
-        "verificationMechanisms": [
-          "EMAIL"
-        ]
-      },
       "providerPlugin": "awscloudformation",
-      "service": "Cognito"
+      "service": "Cognito",
+      "serviceType": "imported"
     }
   },
   "function": {
@@ -40,6 +23,110 @@
     }
   },
   "parameters": {
+    "AMPLIFY_auth_mural9634c0e5_allowUnauthenticatedIdentities": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural9634c0e5"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural9634c0e5_authRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural9634c0e5"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural9634c0e5_authRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural9634c0e5"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural9634c0e5_identityPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural9634c0e5"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural9634c0e5_identityPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural9634c0e5"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural9634c0e5_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural9634c0e5"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural9634c0e5_unauthRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural9634c0e5"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural9634c0e5_unauthRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural9634c0e5"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural9634c0e5_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural9634c0e5"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural9634c0e5_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural9634c0e5"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mural9634c0e5_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mural9634c0e5"
+        }
+      ]
+    },
+    "AMPLIFY_function_S3Trigger51550251_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Trigger51550251"
+        }
+      ]
+    },
+    "AMPLIFY_function_S3Trigger51550251_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Trigger51550251"
+        }
+      ]
+    },
     "AMPLIFY_hosting_amplifyhosting_appId": {
       "usedBy": [
         {
@@ -55,23 +142,30 @@
           "resourceName": "amplifyhosting"
         }
       ]
+    },
+    "AMPLIFY_storage_murale2322c97_bucketName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "murale2322c97"
+        }
+      ]
+    },
+    "AMPLIFY_storage_murale2322c97_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "murale2322c97"
+        }
+      ]
     }
   },
   "storage": {
-    "s38907bde7": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "Name",
-            "Arn",
-            "LambdaExecutionRole"
-          ],
-          "category": "function",
-          "resourceName": "S3Trigger51550251"
-        }
-      ],
+    "murale2322c97": {
+      "dependsOn": [],
       "providerPlugin": "awscloudformation",
-      "service": "S3"
+      "service": "S3",
+      "serviceType": "imported"
     }
   }
 }
