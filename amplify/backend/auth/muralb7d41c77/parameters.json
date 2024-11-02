@@ -1,6 +1,8 @@
 {
   "authSelections": "identityPoolAndUserPool",
   "resourceName": "muralb7d41c77",
+  "aws_user_pools_id": "us-west-1_g59dL1RpX",
+  "aws_user_pools_web_client_id": "2rh9hhdu9ga66g6scs2us436i6",
   "serviceType": "imported",
   "region": "us-west-1",
   "aliasAttributes": [
