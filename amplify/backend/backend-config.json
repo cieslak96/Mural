@@ -1,14 +1,37 @@
 {
   "auth": {
-    "muralb7d41c77": {
+    "mural8aa9f011": {
       "customAuth": false,
       "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
       "providerPlugin": "awscloudformation",
-      "service": "Cognito",
-      "serviceType": "imported"
+      "service": "Cognito"
     }
   },
-  "function": {},
+  "function": {
+    "S3Trigger51550251": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
   "hosting": {
     "amplifyhosting": {
       "lastPushTimeStamp": "2024-10-29T22:18:50.355Z",
@@ -17,94 +40,6 @@
     }
   },
   "parameters": {
-    "AMPLIFY_auth_muralb7d41c77_allowUnauthenticatedIdentities": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralb7d41c77"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralb7d41c77_authRoleArn": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralb7d41c77"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralb7d41c77_authRoleName": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralb7d41c77"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralb7d41c77_identityPoolId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralb7d41c77"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralb7d41c77_identityPoolName": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralb7d41c77"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralb7d41c77_nativeClientId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralb7d41c77"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralb7d41c77_unauthRoleArn": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralb7d41c77"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralb7d41c77_unauthRoleName": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralb7d41c77"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralb7d41c77_userPoolId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralb7d41c77"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralb7d41c77_userPoolName": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralb7d41c77"
-        }
-      ]
-    },
-    "AMPLIFY_auth_muralb7d41c77_webClientId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "muralb7d41c77"
-        }
-      ]
-    },
     "AMPLIFY_hosting_amplifyhosting_appId": {
       "usedBy": [
         {
@@ -120,30 +55,23 @@
           "resourceName": "amplifyhosting"
         }
       ]
-    },
-    "AMPLIFY_storage_mural57f4b4e3_bucketName": {
-      "usedBy": [
-        {
-          "category": "storage",
-          "resourceName": "mural57f4b4e3"
-        }
-      ]
-    },
-    "AMPLIFY_storage_mural57f4b4e3_region": {
-      "usedBy": [
-        {
-          "category": "storage",
-          "resourceName": "mural57f4b4e3"
-        }
-      ]
     }
   },
   "storage": {
-    "mural57f4b4e3": {
-      "dependsOn": [],
+    "s3aff69161": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "LambdaExecutionRole"
+          ],
+          "category": "function",
+          "resourceName": "S3Trigger51550251"
+        }
+      ],
       "providerPlugin": "awscloudformation",
-      "service": "S3",
-      "serviceType": "imported"
+      "service": "S3"
     }
   }
 }

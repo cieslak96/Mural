@@ -1,0 +1,55 @@
+{
+  "version": "1",
+  "cognitoConfig": {
+    "identityPoolName": "mural8aa9f011_identitypool_8aa9f011",
+    "allowUnauthenticatedIdentities": false,
+    "resourceNameTruncated": "mural8aa9f011",
+    "userPoolName": "mural8aa9f011_userpool_8aa9f011",
+    "aws_project_region": "us-west-1",
+    "aws_cognito_identity_pool_id": "us-west-1:660d7a96-c3ca-4e99-b0d7-99c7f295cbe7",
+    "aws_cognito_region": "us-west-1",
+    "aws_user_pools_id": "us-west-1_g59dL1RpX",
+    "aws_user_pools_web_client_id": "2rh9hhdu9ga66g6scs2us436i6",
+    "oauth": {},
+    "autoVerifiedAttributes": [
+      "email",
+      "phone_number"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [],
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": true,
+    "passwordPolicyMinLength": 6,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+      "email",
+      "name"
+    ],
+    "aliasAttributes": [],
+    "userpoolClientGenerateSecret": false,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+      "email",
+      "name"
+    ],
+    "userpoolClientReadAttributes": [
+      "email",
+      "name"
+    ],
+    "userpoolClientLambdaRole": "mural88aa9f011_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": false,
+    "sharedId": "8aa9f011",
+    "resourceName": "mural8aa9f011",
+    "authSelections": "identityPoolAndUserPool",
+    "useDefault": "default",
+    "userPoolGroupList": [],
+    "serviceName": "Cognito",
+    "usernameCaseSensitive": false,
+    "useEnabledMfas": false,
+    "aws_user_files_s3_bucket": "muralbucket",
+    "aws_user_files_s3_bucket_region": "us-west-1"
+  }
+}
