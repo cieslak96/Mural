@@ -1,5 +1,5 @@
 {
-    "resourceName": "mural28f2efdd",
+    "resourceName": "muraldda49253",
     "policyUUID": "d58cab7a",
     "bucketName": "mural2a51296cb70943db9e2dc5f0004d8859",
     "storageAccess": "auth",
@@ -12,5 +12,4 @@
     "triggerFunction": "S3Trigger51550251",
     "groupAccess": {}
   }
-  
   
