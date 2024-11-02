@@ -56,25 +56,25 @@
         }
       ]
     },
-    "AMPLIFY_storage_murald9e66579_bucketName": {
+    "AMPLIFY_storage_mural28f2efdd_bucketName": {
       "usedBy": [
         {
           "category": "storage",
-          "resourceName": "murald9e66579"
+          "resourceName": "mural28f2efdd"
         }
       ]
     },
-    "AMPLIFY_storage_murald9e66579_region": {
+    "AMPLIFY_storage_mural28f2efdd_region": {
       "usedBy": [
         {
           "category": "storage",
-          "resourceName": "murald9e66579"
+          "resourceName": "mural28f2efdd"
         }
       ]
     }
   },
   "storage": {
-    "murald9e66579": {
+    "mural28f2efdd": {
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
       "service": "S3",
