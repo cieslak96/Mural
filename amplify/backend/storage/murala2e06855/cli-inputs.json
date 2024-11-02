@@ -24,7 +24,7 @@
   "aws_user_files_s3_bucket": "muralbucket",
   "aws_user_files_s3_bucket_region": "us-west-1",
   "s3Resource": {
-    "resourceName": "s3aff69161",
+    "resourceName": "murala2e06855",
     "policyUUID": "aff69161",
     "bucketName": "muralbucket",
     "storageAccess": "auth",
