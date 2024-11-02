@@ -61,7 +61,7 @@ const ProfilePage = ({ user, onProfileImageChange }) => {
               <h2 style={{ marginTop: '1rem' }}>{user.getAttributes.name}</h2>
             </>
           ) : (
-            <p>No profile picture uploaded</p>
+            <p>No profile picture uploaded .</p>
           )}
         </View>
       </div>
