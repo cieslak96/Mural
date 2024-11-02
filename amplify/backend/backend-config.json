@@ -1,6 +1,6 @@
 {
   "auth": {
-    "mural00a876da": {
+    "muralb7d41c77": {
       "customAuth": false,
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
@@ -8,6 +8,7 @@
       "serviceType": "imported"
     }
   },
+  "function": {},
   "hosting": {
     "amplifyhosting": {
       "lastPushTimeStamp": "2024-10-29T22:18:50.355Z",
@@ -16,91 +17,91 @@
     }
   },
   "parameters": {
-    "AMPLIFY_auth_mural00a876da_allowUnauthenticatedIdentities": {
+    "AMPLIFY_auth_muralb7d41c77_allowUnauthenticatedIdentities": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "mural00a876da"
+          "resourceName": "muralb7d41c77"
         }
       ]
     },
-    "AMPLIFY_auth_mural00a876da_authRoleArn": {
+    "AMPLIFY_auth_muralb7d41c77_authRoleArn": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "mural00a876da"
+          "resourceName": "muralb7d41c77"
         }
       ]
     },
-    "AMPLIFY_auth_mural00a876da_authRoleName": {
+    "AMPLIFY_auth_muralb7d41c77_authRoleName": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "mural00a876da"
+          "resourceName": "muralb7d41c77"
         }
       ]
     },
-    "AMPLIFY_auth_mural00a876da_identityPoolId": {
+    "AMPLIFY_auth_muralb7d41c77_identityPoolId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "mural00a876da"
+          "resourceName": "muralb7d41c77"
         }
       ]
     },
-    "AMPLIFY_auth_mural00a876da_identityPoolName": {
+    "AMPLIFY_auth_muralb7d41c77_identityPoolName": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "mural00a876da"
+          "resourceName": "muralb7d41c77"
         }
       ]
     },
-    "AMPLIFY_auth_mural00a876da_nativeClientId": {
+    "AMPLIFY_auth_muralb7d41c77_nativeClientId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "mural00a876da"
+          "resourceName": "muralb7d41c77"
         }
       ]
     },
-    "AMPLIFY_auth_mural00a876da_unauthRoleArn": {
+    "AMPLIFY_auth_muralb7d41c77_unauthRoleArn": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "mural00a876da"
+          "resourceName": "muralb7d41c77"
         }
       ]
     },
-    "AMPLIFY_auth_mural00a876da_unauthRoleName": {
+    "AMPLIFY_auth_muralb7d41c77_unauthRoleName": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "mural00a876da"
+          "resourceName": "muralb7d41c77"
         }
       ]
     },
-    "AMPLIFY_auth_mural00a876da_userPoolId": {
+    "AMPLIFY_auth_muralb7d41c77_userPoolId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "mural00a876da"
+          "resourceName": "muralb7d41c77"
         }
       ]
     },
-    "AMPLIFY_auth_mural00a876da_userPoolName": {
+    "AMPLIFY_auth_muralb7d41c77_userPoolName": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "mural00a876da"
+          "resourceName": "muralb7d41c77"
         }
       ]
     },
-    "AMPLIFY_auth_mural00a876da_webClientId": {
+    "AMPLIFY_auth_muralb7d41c77_webClientId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "mural00a876da"
+          "resourceName": "muralb7d41c77"
         }
       ]
     },
@@ -120,25 +121,25 @@
         }
       ]
     },
-    "AMPLIFY_storage_muralf34cdd78_bucketName": {
+    "AMPLIFY_storage_mural57f4b4e3_bucketName": {
       "usedBy": [
         {
           "category": "storage",
-          "resourceName": "muralf34cdd78"
+          "resourceName": "mural57f4b4e3"
         }
       ]
     },
-    "AMPLIFY_storage_muralf34cdd78_region": {
+    "AMPLIFY_storage_mural57f4b4e3_region": {
       "usedBy": [
         {
           "category": "storage",
-          "resourceName": "muralf34cdd78"
+          "resourceName": "mural57f4b4e3"
         }
       ]
     }
   },
   "storage": {
-    "muralf34cdd78": {
+    "mural57f4b4e3": {
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
       "service": "S3",

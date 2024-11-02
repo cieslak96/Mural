@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { getUrl } from 'aws-amplify/storage'; // Ensure correct API method
 import { Image, View } from '@aws-amplify/ui-react';
 import { useNavigate } from 'react-router-dom';
+
 import '@aws-amplify/ui-react/styles.css';
 import './styles.css';
 
@@ -9,6 +10,8 @@ const ProfilePage = ({ user, onProfileImageChange }) => {
   const [imageUrl, setImageUrl] = useState(null);
   const navigate = useNavigate();
   const defaultImagePath = 'default-pictures/user.PNG'; // Default image in case of 404 error
+
+  
 
   const fetchProfileImage = useCallback(async () => {
     try {
@@ -55,7 +58,7 @@ const ProfilePage = ({ user, onProfileImageChange }) => {
                 onMouseEnter={(e) => (e.target.style.transform = 'scale(1.1)')}
                 onMouseLeave={(e) => (e.target.style.transform = 'scale(1)')}
               />
-              <h2 style={{ marginTop: '1rem' }}>{user.username}</h2>
+              <h2 style={{ marginTop: '1rem' }}>{user.getAttributes.name}</h2>
             </>
           ) : (
             <p>No profile picture uploaded</p>
