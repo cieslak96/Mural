@@ -26,7 +26,7 @@
   "s3Resource": {
     "resourceName": "s3aff69161",
     "policyUUID": "aff69161",
-    "bucketName": "mural3428ef90c6c245f5bf20618dce7f65d1",
+    "bucketName": "muralbucket",  
     "storageAccess": "auth",
     "authAccess": [
       "CREATE_AND_UPDATE",
